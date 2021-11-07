@@ -1,1 +1,95 @@
-<p>cadastrar works!</p>
+<div class="container-fluid">
+  <!-- container-fluid pega a tela toda -->
+
+  <div class="row">
+    <!-- lado esquerdo -->
+    <div class="col-md-6" id="img-bg"></div>
+    <!-- / lado esquerdo -->
+
+    <!-- lado direito -->
+    <div class="col-md-6 mt-5 mb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+          <h1 class="text-center">Cadastre-se</h1>
+
+          <!-- label usuario -->
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              class="form-control"
+              type="text"
+              name="nome"
+              id="name"
+              placeholder="Informe seu nome"
+            />
+          </div>
+
+          <!-- label usuario -->
+          <div class="form-group">
+            <label for="usuario">Usuário</label>
+            <input
+              class="form-control"
+              type="text"
+              name="usuario"
+              id="email"
+              placeholder="Como gostaria de ser chamado(a)?"
+            />
+          </div>
+
+          <!-- label foto -->
+          <div class="form-group">
+            <label for="foto">Foto</label>
+            <input
+              class="form-control"
+              type="text"
+              name="foto"
+              id="foto"
+              placeholder="Insira o link da sua foto?"
+            />
+          </div>
+
+          <!-- label senha -->
+          <div class="form-group">
+            <label for="usuario">Senha</label>
+            <input
+              class="form-control"
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Insira a senha"
+            />
+          </div>
+
+          <!-- label confirmar senha -->
+          <div class="form-group">
+            <label for="usuario">Confirmar senha</label>
+            <input
+              class="form-control"
+              type="password"
+              name="confirmar-senha"
+              id="confirmar-senha"
+              placeholder="Confirme sua senha"
+            />
+          </div>
+
+          <!-- label tipo de usuário -->
+          <div class="form-group">
+            <label for="tipo-de-usuario">Tipo de usuário</label>
+            <select class="form-control" name="tipo" id="tipo">
+              <option>Selecione um tipo de usuário</option>
+              <option value="normal">Normal</option>
+              <option value="adm">Administrador</option>
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-danger mr-4" type="submit">Cancelar</button>
+            <button class="btn btn-success" type="submit">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/ lado direito -->
+  </div>
+</div>

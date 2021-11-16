@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { CredenciaisDTO } from '../model/CredenciaisDTO';
 import { Usuario } from '../model/Usuario';
 
@@ -21,5 +22,14 @@ export class AuthService {
       'https://blogpessoalabner.herokuapp.com/api/v1/usuario/cadastrar',
       usuario
     );
+  }
+
+  logado() {
+    let permitido = false; //booleana
+
+    if (environment.token != '') {
+      permitido = true;
+    }
+    return permitido;
   }
 }

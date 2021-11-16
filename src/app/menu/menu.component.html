@@ -7,7 +7,8 @@
     aria-controls="conteudoNavbarSuportado"
     aria-expanded="false"
     aria-label="Alterna navegação"
-  ><span class="navbar-toggler-icon"></span>
+  >
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
@@ -16,7 +17,7 @@
       <!-- foto -->
       <li class="nav-item active">
         <img
-          src="https://imgur.com/HMLmWSW"
+          src="{{ foto }}"
           alt="Imagem do usuário"
           width="50px"
           height="50px"
@@ -25,7 +26,7 @@
       </li>
       <!-- texto -->
       <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bold text-white fs-16">Nome do usuário</p>
+        <p class="m-0 font-weight-bold text-white fs-16">{{ nome }}</p>
       </li>
       <!-- ícone pen -->
       <li class="nav-item pl-3">
@@ -43,7 +44,7 @@
       <li class="nav-item pl-3">
         <a class="margin-0 font-weight-bold text-white fs-16"
           >Sair
-          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <i (click)="sair()" class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
       </li>
     </ul>

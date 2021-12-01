@@ -24,10 +24,10 @@ export class TemaComponent implements OnInit {
     }
 
     this.temaService.refreshToken();
-    this.getAllTemas();
+    this.findAllTemas();
   }
 
- getAllTemas(){
+ findAllTemas(){
     this.temaService.getAllTemas().subscribe((resp: Tema[])=>{
       this.listaDeTemas = resp
     })
@@ -38,7 +38,9 @@ export class TemaComponent implements OnInit {
       this.tema = resp
       alert('Tema cadastrado com sucesso')
       this.tema = new Tema()
-      this.getAllTemas()
+      this.findAllTemas()
     })
   }
 }
+
+
